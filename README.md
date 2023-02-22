@@ -1,13 +1,10 @@
-# Sample Hardhat Project
+# Building on Scroll
+Simple counter smart contract deployed to [Scroll's pre-alpha testnet](https://guide.scroll.io/developers/building-on-scroll).
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+## Steps
+1. Get test ETH and USDC tokens on L1 from [faucet](https://scroll.io/prealpha/faucet)
+2. Use [bridge](https://scroll.io/prealpha/bridge) to transfer some TSETH from L1 to L2
+3. Get wallet private key and paste it into .env (need to create this file)
+4. deploy SC `npx hardhat run scripts/deploy.js --network scrollPrealpha`
+5. interact with SC `npx hardhat run scripts/addToCount.js`
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
